@@ -18,7 +18,18 @@ def get_numbers_from_user():
         # TODO: Check if user typed 'done'
         # TODO: Try to convert to float and add to list
         # TODO: Handle invalid input gracefully
-        pass
+
+        number=input("Enter a number:")
+
+        if number=='done':
+            break
+
+        try:
+            fnumber=float(number)
+            numbers.append(fnumber)
+
+        except ValueError:
+            print("Please, enter a valid number or 'done'")
 
     return numbers
 
@@ -44,6 +55,13 @@ def analyze_numbers(numbers):
         return None
 
     analysis = {}
+    analysis["count"]=len(numbers)
+    analysis["sum"]=sum(numbers)
+    analysis["average"]=sum(numbers)/len(numbers)
+    analysis["mini"]=min(numbers)
+    analysis["maxi"]=max(numbers)
+    analysis["even_count"]=len([x for x in numbers if x % 2 == 0])
+    analysis["odd_count"]=len([x for x in numbers if x % 2 != 0])
 
     # TODO: Calculate count
     # TODO: Calculate sum
@@ -75,8 +93,10 @@ def display_analysis(analysis):
     # Sum: 25
     # Average: 5.00
     # etc.
-    pass
-
+    for key,val in analysis.items():
+        print(key, ":",val)
+    if not analysis:
+        return   
 
 def main():
     """Main function to run the number analyzer."""
