@@ -1,0 +1,13 @@
+b8693a4 Personalize hello message
+daa8efd pb3: fix indentation (spaces only) + correct analyze_numbers keys
+8de8f2f pb3: fix indentation (spaces only) + correct analyze_numbers keys
+368cb5e pb3: fix indentation (spaces) + correct keys (minimum/maximum) and logic
+463b7ab pb3: fix indentation (spaces) + correct keys (minimum/maximum) and logic
+d10fda7 pb3: use exact keys (minimum, maximum) and return full stats
+1411588 Relance autograding
+f704f86 complete  problem4.py
+8f3cb3a complete problem 3
+932b4e8 Problem 2: Temperature converter, solved
+9290129 Add my name and date
+7bcb689 Add GitHub Classroom autograding configuration
+2dc2daa Initial commit
