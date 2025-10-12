@@ -54,7 +54,7 @@ def analyze_numbers(numbers):
     if not numbers:
         return None
 
-     analysis = {}
+analysis = {}
 
     analysis['count'] = len(numbers)
     analysis['sum'] = sum(numbers)
@@ -70,6 +70,8 @@ def analyze_numbers(numbers):
             odd = odd + 1
     analysis['even_count'] = even
     analysis['odd_count'] = odd
+
+
 
     # TODO: Calculate count
     # TODO: Calculate sum
