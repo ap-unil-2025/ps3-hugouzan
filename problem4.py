@@ -73,12 +73,13 @@ def count_characters(filename, include_spaces=True):
     # If include_spaces is False, don't count spaces
     with open(filename, 'r') as f:
         content=f.read()
-        if include_spaces==true:
+        if include_spaces==True:
             return len(content)
         else:
             content=content.replace(" ","").replace("\n","")
             return len(content)
 
+import string
 
 def find_longest_word(filename):
     """
@@ -98,6 +99,8 @@ def find_longest_word(filename):
             content=content.replace(p,"")
         splitted_content=content.split()
         longest_word=max(splitted_content, key=len)
+
+    return longest_word
     
 
 
