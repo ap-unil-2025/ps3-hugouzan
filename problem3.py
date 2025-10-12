@@ -54,7 +54,7 @@ def analyze_numbers(numbers):
     if not numbers:
         return None
 
-analysis = {}
+    analysis = {}
 
     analysis['count'] = len(numbers)
     analysis['sum'] = sum(numbers)
