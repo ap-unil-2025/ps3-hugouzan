@@ -54,14 +54,22 @@ def analyze_numbers(numbers):
     if not numbers:
         return None
 
-    analysis = {}
-    analysis["count"]=len(numbers)
-    analysis["sum"]=sum(numbers)
-    analysis["average"]=sum(numbers)/len(numbers)
-    analysis["mini"]=min(numbers)
-    analysis["maxi"]=max(numbers)
-    analysis["even_count"]=len([x for x in numbers if x % 2 == 0])
-    analysis["odd_count"]=len([x for x in numbers if x % 2 != 0])
+     analysis = {}
+
+    analysis['count'] = len(numbers)
+    analysis['sum'] = sum(numbers)
+    analysis['average'] = sum(numbers)/len(numbers)
+    analysis['minimum'] = min(numbers)
+    analysis['maximum'] = max(numbers)
+    even = 0
+    odd = 0
+    for i in range(len(numbers)):
+        if numbers[i] % 2 == 0:
+            even = even + 1 
+        else: 
+            odd = odd + 1
+    analysis['even_count'] = even
+    analysis['odd_count'] = odd
 
     # TODO: Calculate count
     # TODO: Calculate sum
